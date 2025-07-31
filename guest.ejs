@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saisie Élève</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Espace Saisie</h1>
+    <nav><a href="/logout">Déconnexion</a></nav>
+  </header>
+  <main class="guest-form">
+    <h2>📝 Enregistrer un élève</h2>
+    <form method="POST">
+      <label>IEP :</label>
+      <input type="text" name="iep" required />
+
+      <label>École :</label>
+      <input type="text" name="school" required />
+
+      <label>Classe :</label>
+      <select name="className" required>
+        <option>CP</option>
+        <option>CE1</option>
+        <option>CE2</option>
+        <option>CM1</option>
+        <option>CM2</option>
+      </select>
+
+      <label>Nom complet :</label>
+      <input type="text" name="fullName" required />
+
+      <label>Date de naissance :</label>
+      <input type="date" name="birthDate" required />
+
+      <label>Lieu de naissance :</label>
+      <input type="text" name="birthPlace" required />
+
+      <label>Matricule :</label>
+      <input type="text" name="matricule" placeholder="EL2025XXXX" required />
+
+      <button type="submit">Enregistrer</button>
+    </form>
+  </main>
+</body>
+</html>

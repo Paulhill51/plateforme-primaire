@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Élèves</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin - Gestion Scolaire</h1>
+    <nav><a href="/logout">Déconnexion</a></nav>
+  </header>
+  <main class="admin-dashboard">
+    <h2>📋 Liste des élèves</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Matricule</th>
+          <th>Nom</th>
+          <th>Classe</th>
+          <th>École</th>
+          <th>IEP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students.forEach(s => { %>
+          <tr>
+            <td><%= s.matricule %></td>
+            <td><%= s.full_name %></td>
+            <td><%= s.class_name %></td>
+            <td><%= s.school %></td>
+            <td><%= s.iep %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
